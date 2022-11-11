@@ -1,8 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
@@ -13,22 +10,22 @@ class CustomHeaders extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      localizationsDelegates: [
+      localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
       ],
-      supportedLocales: [
-        const Locale('en'),
-        const Locale('zh'),
-        const Locale('he'),
-        const Locale('ru'),
-        const Locale('fr', 'BE'),
-        const Locale('fr', 'CA'),
-        const Locale('ja'),
-        const Locale('de'),
-        const Locale('hi'),
-        const Locale('ar'),
-        const Locale('he'),
+      supportedLocales: const [
+        Locale('en'),
+        Locale('zh'),
+        Locale('he'),
+        Locale('ru'),
+        Locale('fr', 'BE'),
+        Locale('fr', 'CA'),
+        Locale('ja'),
+        Locale('de'),
+        Locale('hi'),
+        Locale('ar'),
+        Locale('he'),
       ],
       locale: const Locale('fr','CA'),
       debugShowCheckedModeBanner: false,
@@ -54,16 +51,16 @@ class ScheduleExample extends State<MyApp> {
     _width = MediaQuery.of(context).size.width;
     cellWidth = _width! / 8;
     return  Scaffold(
-        body: Padding(padding: EdgeInsets.fromLTRB(0, 30, 0, 0),child:
+        body: Padding(padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),child:
         Column(
             children: <Widget>[
               Container(
-                color: Color(0xFF381460),
+                color: const Color(0xFF381460),
                 width: _width,
                 height: 40,
                 child: Text(_string,
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 25, color: Colors.white)),
+                    style: const TextStyle(fontSize: 25, color: Colors.white)),
               ),
               Expanded(
                   child: SfCalendar(
@@ -78,7 +75,7 @@ class ScheduleExample extends State<MyApp> {
                             .toString();
                         _string = _headerText![0].toUpperCase() +
                             _headerText!.substring(1);
-                        SchedulerBinding.instance!.addPostFrameCallback((
+                        SchedulerBinding.instance.addPostFrameCallback((
                             duration) {
                           setState(() {});
                         });
