@@ -10,6 +10,8 @@ Refer to this [KB](https://www.syncfusion.com/kb/10997/how-to-add-custom-header-
 
 Using DateFormat, you can localize the custom header and update the header with the specified locale using the [onViewChanged](https://help.syncfusion.com/flutter/calendar/callbacks#view-changed-callback) callback.
 
+![CustomHeader](https://user-images.githubusercontent.com/46158936/204262257-640ac1d5-8813-4a8b-87c4-ef2d52a30df6.jpeg)
+
 You can also refer our UG documentation to know more about [Localization](https://help.syncfusion.com/flutter/calendar/localization) support in the Flutter calendar.
 
 ## Requirements to run the demo
